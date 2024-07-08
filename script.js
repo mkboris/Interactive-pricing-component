@@ -20,12 +20,18 @@ const pricingData = [
 const updatePricing = () => {
   const value = rangeInput.value - 1;
   const data = pricingData[value];
-  const price = toggle.checked
-    ? (data.price * 0.75).toFixed(2)
-    : data.price.toFixed(2);
+  let price;
+  if (toggle.checked) {
+    // Calculate yearly price (12 months with 25% discount)
+    price = (data.price * 12 * 0.75).toFixed(2);
+    pricePeriod.textContent = " / year";
+  } else {
+    // Calculate monthly price
+    price = data.price.toFixed(2);
+    pricePeriod.textContent = " / month";
+  }
   pageviewsDisplay.textContent = `${data.pageviews} Pageviews`;
   priceDisplay.textContent = `$${price}`;
-  pricePeriod.textContent = toggle.checked ? " / year" : " / month";
 };
 
 toggle.checked = false;
