@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Sign up for our 30-day trial with simple, traffic-based pricing. No credit card required. Get 100K pageviews for $16 per month."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="main__header">
+        <h1 class="main__title">Simple, traffic-based pricing</h1>
+        <p class="main__subtitle">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </div>
+
+      <div class="pricing">
+        <p class="pricing__views">100K Pageviews</p>
+
+        <input
+          class="pricing__slider"
+          type="range"
+          name="pageviews"
+          id="pageviews"
+          min="1"
+          max="5"
+          value="3"
+          step="1"
+        />
+
+        <p class="pricing__container">
+          <span class="pricing__cost">$16.00</span
+          ><span class="pricing__period">/ month</span>
+        </p>
+
+        <div class="billing">
+          <div class="billing__container">
+            <label class="billing__label" for="billingToggle" id="monthlyLabel"
+              >Monthly Billing</label
+            >
+
+            <div class="billing__toggle-container">
+              <input
+                class="billing__toggle"
+                type="checkbox"
+                name="billingToggle"
+                id="billingToggle"
+                tabindex="0"
+              />
+              <span class="billing__slider" id="billingSlider"></span>
+            </div>
+
+            <label class="billing__label" for="billingToggle" id="yearlyLabel"
+              >Yearly Billing</label
+            >
+          </div>
+
+          <div class="billing__discount">
+            <p class="billing__discount-text">-25%</p>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <ul class="features">
+          <li class="features__item">
+            <img
+              class="features__icon"
+              src="images/icon-check.svg"
+              alt=""
+            />Unlimited websites
+          </li>
+          <li class="features__item">
+            <img
+              class="features__icon"
+              src="images/icon-check.svg"
+              alt=""
+            />100% data ownership
+          </li>
+          <li class="features__item">
+            <img
+              class="features__icon"
+              src="images/icon-check.svg"
+              alt=""
+            />Email reports
+          </li>
+        </ul>
+
+        <button class="cta-button">Start my trial</button>
+      </div>
+    </main>
+  </body>
+</html>
