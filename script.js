@@ -55,8 +55,6 @@ rangeInput.addEventListener("input", () => {
 
 updatePricing();
 
-("use strict");
-
 const updateDiscountText = () => {
   const discountText = document.querySelector(".billing__discount-text");
   if (window.innerWidth > 425) {
