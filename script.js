@@ -22,11 +22,9 @@ const updatePricing = () => {
   const data = pricingData[value];
   let price;
   if (toggle.checked) {
-    // Calculate yearly price (12 months with 25% discount)
     price = (data.price * 12 * 0.75).toFixed(2);
     pricePeriod.textContent = " / year";
   } else {
-    // Calculate monthly price
     price = data.price.toFixed(2);
     pricePeriod.textContent = " / month";
   }
